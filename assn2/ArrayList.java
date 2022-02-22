@@ -64,6 +64,14 @@ public class ArrayList implements List {
     //See List.java for a description of the method's behavior and examples.
 
     /*Your code here */
+      for (int i = 0; i < size; i ++){
+          if (this.elts[i]> elt){
+              if (this.elts[i]<elt){
+                  this.elts[i] = elt;
+              }
+
+          }
+      }
       
 	  
     return false;  //Remove this when you implement the method!
