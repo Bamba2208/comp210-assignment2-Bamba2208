@@ -61,21 +61,28 @@ public class ArrayList implements List {
   }
 
   public boolean inSort ( double elt ) {
-    //See List.java for a description of the method's behavior and examples.
+      //See List.java for a description of the method's behavior and examples.
 
-    /*Your code here */
-    if (size> MAX){
-        return false;
-
-    }
-    if (size == 0){
-        ins(0, elt);
-    }
-    for (int = 0; i < elts.length; i++){
+      /*Your code here */
+      if (size > MAX) {
+          return false;
+      }
+      if (size == 0) {
+          ins(0, elt);
+      }
+      for (int i = 0; i < elts.length; i++) {
+          if (elt < elts[i] && elt >= elts[i - 1]) {
+              if (elt < elts[i] && elt >= elts[i - 1]) {
+                  ins(i, elt);
+              }
+          }
+      }
+      return true;
   }
 
+
    
-  public boolean bubbleIns  ( double elt ) {
+  public boolean bubbleIns  ( double elt) {
 
     //See List.java for a description of the method's behavior and examples.
     //Hint: Do any of the methods you're already given help? 
@@ -85,7 +92,7 @@ public class ArrayList implements List {
     if (findLast(elt)>0){
         rem(findLast(elt));
     }
-    return true;
+    return false;
 
   }
 	

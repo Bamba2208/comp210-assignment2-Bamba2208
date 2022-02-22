@@ -27,7 +27,7 @@ public class LinkedList implements List {
      */
       /*Your code here */
     if (index<0 || index>this.size) { return false; } {
-        ;
+
 
       }
 
@@ -39,13 +39,42 @@ public class LinkedList implements List {
     //Hint: Make sure you understand how this is different from find
 
     /*Your code here */
-    return -1;  //Remove this when you implement the method!
+    Node current = tail;
+    int index = this.size() -1;
+    while (current != null) {
+      if (current.getValue() == element) {
+        return index;
+      }
+
+        index--;
+        current = current.getNext();
+
+    }//Remove this when you implement the method!
+
+    return -1;
   }
 
   public boolean inSort ( double elt ) {
     //See List.java for a description of the method's behavior and examples.
 
     /*Your code here */
+    int index = 0;
+    Node curr = head;
+    while (curr != null){
+      if (elt < curr.getValue()){
+        ins(index, elt);
+        return true;
+      }
+      if (elt >= curr.getValue()){
+        curr = curr.getNext();
+        if (elt < curr.getValue()){
+          ins(index+1, elt);
+          return true;
+        }
+
+      }
+      index++;
+    }
     return false;  //Remove this when you implement the method!
   }
    
@@ -54,7 +83,9 @@ public class LinkedList implements List {
     //Hint: Do any of the methods already provided to you help?
 
     /*Your code here */
-    return false;  //Remove this when you implement the method!
+    rem(find(elt));
+    ins(0, elt);
+    return true;  //Remove this when you implement the method!
   }
   
   /* Implementation given to you. Do not modify below this. */
