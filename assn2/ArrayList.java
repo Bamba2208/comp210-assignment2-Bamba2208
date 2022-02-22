@@ -67,7 +67,12 @@ public class ArrayList implements List {
       for (int i = 0; i < elts.length; i ++){
           if (this.elts[i]> elt){
               if (this.elts[i-1]<elt){
-                  this.elts[i] = elt;
+                  return true;
+
+
+              }
+              else{
+                  return false;
               }
 
           }
