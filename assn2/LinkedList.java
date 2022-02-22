@@ -34,7 +34,7 @@ public class LinkedList implements List {
 
       }
 
-      return false;  //Remove this when you implement the method!
+
   }
       
   public int findLast ( double element ) {
