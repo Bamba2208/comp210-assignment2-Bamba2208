@@ -64,18 +64,14 @@ public class ArrayList implements List {
     //See List.java for a description of the method's behavior and examples.
 
     /*Your code here */
-      for (int i = 0; i < elts.length; i ++){
-          if (this.elts[i]> elt){
-              if (this.elts[i-1]<elt){
-                  return true;
+    if (size> MAX){
+        return false;
 
-
-              }
-
-              }
-
-          }
-      return false;
+    }
+    if (size == 0){
+        ins(0, elt);
+    }
+    for (int = 0; i < elts.length; i++){
   }
 
    
@@ -85,12 +81,11 @@ public class ArrayList implements List {
     //Hint: Do any of the methods you're already given help? 
 
     /*Your code here */
-      int index = find(elt);
-      if(index != 1){
-          rem(index);
-      }
-      return ins(0, elt);
-	  
+    ins(0, elt);
+    if (findLast(elt)>0){
+        rem(findLast(elt));
+    }
+    return true;
 
   }
 	
