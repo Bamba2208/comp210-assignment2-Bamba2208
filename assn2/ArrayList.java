@@ -86,7 +86,7 @@ public class ArrayList implements List {
 
     /*Your code here */
       int index = find(elt);
-      if(index != =1){
+      if(index != 1){
           rem(index);
       }
       return ins(0, elt);
