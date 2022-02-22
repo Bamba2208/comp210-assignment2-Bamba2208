@@ -64,20 +64,15 @@ public class ArrayList implements List {
       //See List.java for a description of the method's behavior and examples.
 
       /*Your code here */
-      if (size > MAX) {
-          return false;
-      }
-      if (size == 0) {
-          ins(0, elt);
-      }
-      for (int i = 0; i < elts.length; i++) {
-          if (elt < elts[i] && elt >= elts[i - 1]) {
-              if (elt < elts[i] && elt >= elts[i - 1]) {
-                  ins(i, elt);
-              }
-          }
-      }
-      return true;
+        if(elt<this.elts[0]){
+            ins(0, elt):
+        }
+        for(int i = 1; i <= this.size; i++){
+            if(elt<this.elts[i]&&elt>=this.elts[i-1]){
+                ins(i, elt);
+                return true;
+            }
+        }
   }
 
 
