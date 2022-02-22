@@ -65,7 +65,7 @@ public class ArrayList implements List {
 
       /*Your code here */
         if(elt<this.elts[0]){
-            ins(0, elt):
+            ins(0, elt);
         }
         for(int i = 1; i <= this.size; i++){
             if(elt<this.elts[i]&&elt>=this.elts[i-1]){
@@ -73,6 +73,7 @@ public class ArrayList implements List {
                 return true;
             }
         }
+        return false;
   }
 
 
