@@ -85,8 +85,13 @@ public class ArrayList implements List {
     //Hint: Do any of the methods you're already given help? 
 
     /*Your code here */
+      int index = find(elt);
+      if(index != =1){
+          rem(index);
+      }
+      return ins(0, elt);
 	  
-    return false;  //Remove this when you implement the method!
+
   }
 	
    /* Implementation given to you. Do not modify below this. */
