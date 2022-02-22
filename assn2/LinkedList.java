@@ -27,6 +27,9 @@ public class LinkedList implements List {
      */
       /*Your code here */
     if (index<0 || index>this.size) { return false; } {
+      this.rem(index);
+      this.ins(index, element);
+      return true;
 
 
       }
