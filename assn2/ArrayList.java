@@ -48,8 +48,15 @@ public class ArrayList implements List {
       //Hint: Make sure you understand how this is different from find
 
       /*Your code here */
-    
-          return -1;  //Remove this when you implement the method!
+      int loc = -1;
+      for (int i = size -1; i < size; i--){
+          if (this.elts[i] == element){
+              loc = i; break;
+          }
+
+      }
+      return loc;
+
 
   }
 
