@@ -71,16 +71,13 @@ public class ArrayList implements List {
 
 
               }
-              else{
-                  return false;
+
               }
 
           }
-      }
-      
-	  
-    return false;  //Remove this when you implement the method!
+      return false;
   }
+
    
   public boolean bubbleIns  ( double elt ) {
 
